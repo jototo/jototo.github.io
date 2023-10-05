@@ -12,6 +12,10 @@ body {
     font-family: 'Work Sans', -apple-system, system-ui, sans-serif;
     color: var(--colors-textPrimary);
     background-color: #f9fafb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
 }
 
 a {
@@ -69,7 +73,7 @@ a {
 
 /* Profile picture styles */
 .c-fyLtgh {
-    border-radius: 1000px;
+    border-radius: 50%;
     width: 150px;
     height: auto;
     display: none;
