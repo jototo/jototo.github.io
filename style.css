@@ -1,0 +1,85 @@
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: 'Work Sans', -apple-system, system-ui, sans-serif;
+    color: var(--colors-textPrimary);
+    background-color: #f9fafb;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header styles */
+header {
+    background-color: var(--colors-slate1);
+    padding: 10px;
+    text-align: center;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: var(--colors-textPrimary);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+/* Main content styles */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: var(--fontSizes-7);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--fontSizes-4);
+    font-weight: 500;
+    color: var(--colors-textSecondary);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--colors-textPrimary);
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+/* Profile picture */
+img.c-fyLtgh {
+    border-radius: 1000px;
+    width: 150px;
+    height: auto;
+    display: none;
+}
+
+@media (min-width: 640px) {
+    img.c-fyLtgh {
+        display: block;
+    }
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--colors-slate1);
+    color: var(--colors-textPrimary);
+}
