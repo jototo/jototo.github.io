@@ -1,81 +1,102 @@
-/* FILEPATH: /Users/joshua/Documents/GitHub/jototo.github.io/style.css */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Reset styles */
-* {
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    background-color: #f5f5f5;
+    font-family: 'Work Sans', -apple-system, system-ui, sans-serif;
+    color: var(--colors-textPrimary);
+    background-color: #f9fafb;
 }
 
 a {
-    color: #0077cc;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
-
 /* Header styles */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.c-jYvAQL {
+    position: relative;
+    font-family: var(--fonts-primary);
+    color: var(--colors-textPrimary);
+    margin: 0;
+    background: #f9fafb;
+    width: 100%;
+    overflow-x: hidden;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
+.c-jYvAQL * {
+    box-sizing: border-box;
 }
 
-nav {
-    display: flex;
+.c-jYvAQL a {
+    text-decoration: none;
 }
 
-nav a {
-    margin-left: 1rem;
+/* Page title styles */
+.c-cmlRS {
+    font-size: var(--fontSizes-9);
+    font-weight: 700;
+    margin: 0;
 }
 
-/* Main styles */
-main {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Subtitle styles */
+.c-ckqvOR {
+    font-size: var(--fontSizes-5);
+    font-weight: 500;
+    color: var(--colors-textSecondary);
+    margin-top: var(--space-1);
+    margin-bottom: var(--space-2);
+    letter-spacing: -0.016em;
+    line-height: 27px;
 }
 
-h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+/* Social links container styles */
+.c-huTBYR {
+    margin-top: var(--space-4);
+    font-size: var(--fontSizes-5);
 }
 
-p {
-    margin-bottom: 1rem;
+.c-huTBYR a {
+    color: var(--colors-textPrimary);
+    font-weight: 600;
+    margin-right: var(--space-4);
+}
+
+/* Profile picture styles */
+.c-fyLtgh {
+    border-radius: 1000px;
+    width: 150px;
+    height: auto;
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .c-fyLtgh {
+        display: block;
+    }
+}
+
+/* Main content container styles */
+.c-jrMbRr {
+    width: 100%;
+    max-width: 740px;
+    margin: var(--space-6) auto;
+    padding: 0 var(--space-6);
+}
+
+@media (min-width: 640px) {
+    .c-jrMbRr {
+        margin: var(--space-8) auto;
+    }
 }
 
 /* Footer styles */
-footer {
-    text-align: center;
-    padding: 1rem;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-}
+/* Add your footer styles here */
 
-footer p {
-    margin-bottom: 0;
-}
+/* Add any other original styles here */
+/* ... */
