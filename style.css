@@ -12,7 +12,6 @@ body {
     margin-right: 20px;
     text-align: right;
     width: 150px;
-    font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
   }
   
   #menu .title {
@@ -30,6 +29,8 @@ body {
   #menu li a {
     display: inline-block;
     color: #0864c7;
+    font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
+    font-size: 12px;
   }
   
   #left {
