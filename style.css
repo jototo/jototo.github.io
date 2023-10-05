@@ -24,6 +24,7 @@ a {
 
 /* Header styles */
 .c-jYvAQL {
+    font-family: 'Work Sans', -apple-system, system-ui, sans-serif;
     position: relative;
     font-family: var(--fonts-primary);
     color: var(--colors-textPrimary);
@@ -31,6 +32,10 @@ a {
     background: #f9fafb;
     width: 100%;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
 }
 
 .c-jYvAQL * {
@@ -98,9 +103,3 @@ a {
         margin: var(--space-8) auto;
     }
 }
-
-/* Footer styles */
-/* Add your footer styles here */
-
-/* Add any other original styles here */
-/* ... */
