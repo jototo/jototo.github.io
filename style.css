@@ -1,105 +1,106 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/* Reset some default styles */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption {
+body {
+    font-family: Helvetica;
+    font-size: 13px;
+  }
+  
+  #menu {
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+    text-align: right;
+    width: 150px;
+    font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
+  }
+  
+  #menu .title {
+  }
+  
+  #menu ul {
+    list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-/* Global styles */
-body {
-    font-family: 'Work Sans', -apple-system, system-ui, sans-serif;
-    color: var(--colors-textPrimary);
-    background-color: #f9fafb;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-}
-
-a {
-    text-decoration: none;
-}
-
-/* Header styles */
-.c-jYvAQL {
-    font-family: 'Work Sans', -apple-system, system-ui, sans-serif;
+  }
+  
+  #menu li {
+  }
+  
+  #menu li a {
+    display: inline-block;
+    color: #0864c7;
+  }
+  
+  #left {
+    height: 1px;
+    float: left;
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    width: 200px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #content {
+    margin-top: 15px;
+    float: left;
+    width: 500px;
+  }
+  
+  #content h1, #content h2, #content h3 {
+    font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
+    margin: 0;
+  }
+  
+  #content h2 {
+    margin-top: 2em;
+  }
+  
+  #content .byline, #content .byline a, #content .note {
+    font-size: 10px;
+    color: #aaa;
+  }
+  
+  #content p, #content ul {
+    color: #333;
+    line-height: 18px;
+  }
+  
+  #content sup.note {
+    display: inline-block;
+    margin-top: -5px;
+  }
+  
+  #content p.notop {
+    margin-top: 0;
+  }
+  
+  #content .thanks {
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #eee;
+    margin-bottom: 4em;
+    font-size: smaller;
+    color: #777;
+  }
+  
+  #content .thanks a {
+    color: #777;
+  }
+  
+  #content li {
+    margin-bottom: 0.7em;
+  }
+  
+  .post + .post {
+    margin-top: 50px;
+  }
+  
+  sup, sub {
+    vertical-align: baseline;
     position: relative;
-    font-family: var(--fonts-primary);
-    color: var(--colors-textPrimary);
-    margin: 0;
-    background: #f9fafb;
-    width: 100%;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: left;
-}
-
-.c-jYvAQL * {
-    box-sizing: border-box;
-}
-
-.c-jYvAQL a {
-    text-decoration: none;
-}
-
-/* Page title styles */
-.c-cmlRS {
-    font-size: var(--fontSizes-9);
-    font-weight: 700;
-    margin: 0;
-}
-
-/* Subtitle styles */
-.c-ckqvOR {
-    font-size: var(--fontSizes-5);
-    font-weight: 500;
-    color: var(--colors-textSecondary);
-    margin-top: var(--space-1);
-    margin-bottom: var(--space-2);
-    letter-spacing: -0.016em;
-    line-height: 27px;
-}
-
-/* Social links container styles */
-.c-huTBYR {
-    margin-top: var(--space-4);
-    font-size: var(--fontSizes-5);
-}
-
-.c-huTBYR a {
-    color: var(--colors-textPrimary);
-    font-weight: 600;
-    margin-right: var(--space-4);
-}
-
-/* Profile picture styles */
-.c-fyLtgh {
-    border-radius: 50%;
-    width: 150px;
-    height: auto;
-    display: none;
-}
-
-@media (min-width: 640px) {
-    .c-fyLtgh {
-        display: block;
-    }
-}
-
-/* Main content container styles */
-.c-jrMbRr {
-    width: 100%;
-    max-width: 740px;
-    margin: var(--space-6) auto;
-    padding: 0 var(--space-6);
-}
-
-@media (min-width: 640px) {
-    .c-jrMbRr {
-        margin: var(--space-8) auto;
-    }
-}
+    top: -0.4em;
+  }
+  sub { 
+    top: 0.4em; 
+  }
+  
