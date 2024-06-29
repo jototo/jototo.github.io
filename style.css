@@ -1,45 +1,22 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-/* Tablet styles (e.g., iPad) */
-@media (max-width: 768px) {
-  body {
-    font-size: 16px; /* Adjust font size for smaller screens */
-  }
-  #menu {
-    float: none;
-    margin: 0 auto; /* Center align menu on smaller screens */
-    text-align: center;
-    width: auto;
-  }
-}
-
-/* Mobile styles */
-@media (max-width: 480px) {
-  body {
-    font-size: 14px; /* Further adjust font size for mobile */
-  }
-  #menu {
-    float: none;
-    margin: 10px auto; /* Center align menu with some margin */
-    text-align: center;
-    width: auto;
-  }
-  #left {
-    display: none; /* Hide the left column on mobile screens */
-  }
-  #content {
-    width: 100%; /* Full width for content on mobile */
-    margin-left: 10px; /* Add margin for better readability */
-    margin-right: 10px;
-  }
-}
-
+/* Global styles */
 body {
   font-family: 'Work Sans', -apple-system, system-ui, sans-serif;
   font-size: 18px;
+  margin: 0;
+  padding: 0;
 }
 
+.container {
+  max-width: 800px; /* Adjust maximum width as per your design */
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Menu styles */
 #menu {
   float: right;
   margin-top: 30px;
@@ -54,91 +31,73 @@ body {
   padding: 0;
 }
 
+#menu li {
+  margin-bottom: 10px; /* Add margin between menu items */
+}
+
 #menu li a {
-  display: inline-block;
+  display: block; /* Ensure each menu item is a block element */
   color: #0864c7;
   font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
   font-size: 12px;
+  text-decoration: none;
 }
 
+/* Content styles */
 #left {
-  height: 1px;
-  float: left;
-  display: block;
-  min-width: 0;
-  overflow: hidden;
-  width: 200px;
-  margin: 0;
-  padding: 0;
+  display: none; /* Hide left column on mobile */
 }
 
 #content {
   margin-top: 15px;
-  float: left;
-  width: 500px;
+  padding: 0;
 }
 
-#content h1,
-#content h2,
+#content img {
+  display: block;
+  max-width: 100%; /* Ensure image scales down to fit container */
+  height: 130px; /* Maintain aspect ratio */
+  margin-bottom: 15px;
+}
+
+#content p {
+  color: #333;
+  line-height: 1.6;
+}
+
 #content h3 {
   font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
-  margin: 0;
+  margin-top: 1.5em;
 }
 
-#content h2 {
-  margin-top: 2em;
-}
-
-#content .byline,
-#content .byline a,
-#content .note {
-  font-size: 10px;
-  color: #aaa;
-}
-
-#content p,
-#content ul {
-  color: #333;
-  line-height: 18px;
-}
-
-#content sup.note {
-  display: inline-block;
-  margin-top: -5px;
-}
-
-#content p.notop {
+#content .notop {
   margin-top: 0;
 }
 
-#content .thanks {
-  margin-top: 2em;
-  padding-top: 1em;
-  border-top: 1px solid #eee;
-  margin-bottom: 4em;
-  font-size: smaller;
-  color: #777;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Adjust font size for tablets */
+  }
+  .container {
+    padding: 10px;
+  }
+  #menu {
+    float: none;
+    margin: 10px right; /* Center align menu on smaller screens */
+    text-align: right;
+    width: auto;
+  }
 }
 
-#content .thanks a {
-  color: #777;
-}
-
-#content li {
-  margin-bottom: 0.7em;
-}
-
-.post+.post {
-  margin-top: 50px;
-}
-
-sup,
-sub {
-  vertical-align: baseline;
-  position: relative;
-  top: -0.4em;
-}
-
-sub {
-  top: 0.4em;
+@media (max-width: 480px) {
+  body {
+    font-size: 14px; /* Further adjust font size for mobile */
+  }
+  .container {
+    padding: 5px;
+  }
+  #content {
+    padding: 0 10px; /* Add padding to content for better spacing */
+  }
 }
