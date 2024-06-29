@@ -1,24 +1,37 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-
 /* Tablet styles (e.g., iPad) */
 @media (max-width: 768px) {
-  p {
-    max-width: 100%;
-    /* Paragraphs won't exceed the screen width */
-    word-wrap: break-word;
-    /* Allow long words to break and wrap */
+  body {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
+  #menu {
+    float: none;
+    margin: 0 auto; /* Center align menu on smaller screens */
+    text-align: center;
+    width: auto;
   }
 }
 
 /* Mobile styles */
 @media (max-width: 480px) {
-  p {
-    max-width: 100%;
-    /* Paragraphs won't exceed the screen width */
-    word-wrap: break-word;
-    /* Allow long words to break and wrap */
+  body {
+    font-size: 14px; /* Further adjust font size for mobile */
+  }
+  #menu {
+    float: none;
+    margin: 10px auto; /* Center align menu with some margin */
+    text-align: center;
+    width: auto;
+  }
+  #left {
+    display: none; /* Hide the left column on mobile screens */
+  }
+  #content {
+    width: 100%; /* Full width for content on mobile */
+    margin-left: 10px; /* Add margin for better readability */
+    margin-right: 10px;
   }
 }
 
