@@ -27,12 +27,12 @@ body {
 
 #menu ul {
   list-style-type: none;
-  margin: 0;
+  margin-top: 3px;
   padding: 0;
 }
 
 #menu li {
-  margin-bottom: 10px; /* Add margin between menu items */
+  margin-bottom: 5px; /* Add margin between menu items */
 }
 
 #menu li a {
@@ -92,7 +92,7 @@ body {
 
 @media (max-width: 480px) {
   body {
-    font-size: 14px; /* Further adjust font size for mobile */
+    font-size: 16px; /* Further adjust font size for mobile */
   }
   .container {
     padding: 5px;
