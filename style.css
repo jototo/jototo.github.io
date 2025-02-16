@@ -105,12 +105,12 @@ body {
 /* Dark mode styles */
 @media (prefers-color-scheme: dark) {
   body {
-    background-color: #102429;
+    background-color: #0d1c20;
     color: #e0e0e0;
   }
 
   #menu li a {
-    color: #bb86fc;
+    color: #86c7fc;
   }
 
   #content p {
@@ -118,6 +118,6 @@ body {
   }
 
   #content h3 {
-    color: #bb86fc;
+    color: #86c7fc;
   }
 }
