@@ -54,7 +54,8 @@ body {
 }
 
 #content img {
-  display: block;
+  display: block; /* Ensure images are block elements */
+  border-radius: 50%;
   max-width: 100%; /* Ensure image scales down to fit container */
   height: 130px; /* Maintain aspect ratio */
   margin-bottom: 15px;
