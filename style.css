@@ -101,3 +101,23 @@ body {
     padding: 0 10px; /* Add padding to content for better spacing */
   }
 }
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+
+  #menu li a {
+    color: #bb86fc;
+  }
+
+  #content p {
+    color: #e0e0e0;
+  }
+
+  #content h3 {
+    color: #bb86fc;
+  }
+}
