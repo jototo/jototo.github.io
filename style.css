@@ -118,31 +118,3 @@ a:active {
     padding: 0 10px;
   }
 }
-
-/* Optional: Light mode styles */
-@media (prefers-color-scheme: light) {
-  body {
-    background-color: #ffffff;
-    color: #333333;
-  }
-  
-  a {
-    color: #0864c7;
-  }
-  
-  a:visited {
-    color: #5a2d82;
-  }
-  
-  a:hover {
-    color: #0a4b8a;
-  }
-  
-  a:active {
-    color: #ff6600;
-  }
-  
-  #content h3 {
-    color: #0864c7;
-  }
-}
