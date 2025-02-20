@@ -9,6 +9,23 @@ body {
   padding: 0;
 }
 
+/* Add universal link styles here */
+a {
+  color: #0864c7; /* Default link color (matching your existing menu color) */
+}
+
+a:visited {
+  color: #5a2d82; /* Purple for visited links */
+}
+
+a:hover {
+  color: #0a4b8a; /* Darker blue for hover */
+}
+
+a:active {
+  color: #ff6600; /* Orange when clicking */
+}
+
 .container {
   max-width: 800px; /* Adjust maximum width as per your design */
   margin: 0 auto;
