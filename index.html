@@ -237,6 +237,7 @@
 <use href="#trees-scene" transform="translate(18,1040)"/>
 <use href="#trees-scene" transform="translate(-30,1560)"/>
 <use href="#trees-scene" transform="translate(14,2080)"/>
+<path id="creek-line" d="M 0 695 C 180 700, 280 688, 371 692 C 460 696, 560 686, 700 690" stroke="#4878d4" stroke-width="3.5" fill="none" stroke-linecap="round"/>
 <g id="trail-group">
 <path class="trail-seg" d="M 371.0 480.0 C 410.6 496.8, 410.6 507.5, 371.0 524.3" stroke="#9b7a6a" stroke-width="4.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path class="trail-seg" d="M 371.0 524.3 C 331.4 541.1, 331.4 551.7, 371.0 568.6" stroke="#9b7a6a" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -315,7 +316,7 @@
   const svg   = document.getElementById('forest-svg');
   const segs  = Array.from(document.querySelectorAll('.trail-seg'));
 
-  // Set up each segment for sequential reveal
+  // Set up trail segments for sequential reveal
   const lengths   = segs.map(p => p.getTotalLength());
   const totalLen  = lengths.reduce((a, b) => a + b, 0);
   segs.forEach((seg, i) => {
@@ -323,12 +324,18 @@
     seg.style.strokeDashoffset = lengths[i];
   });
 
+  // Set up creek for left-to-right reveal
+  const creek    = document.getElementById('creek-line');
+  const creekLen = creek.getTotalLength();
+  creek.style.strokeDasharray  = creekLen;
+  creek.style.strokeDashoffset = creekLen;
+
   window.addEventListener('scroll', () => {
     const progress = Math.min(
       window.scrollY / (document.body.scrollHeight - window.innerHeight), 1
     );
 
-    // Camera — slower pan (1300 viewBox units over full scroll)
+    // Camera pan
     const y = 130 + progress * (700 - 130);
     svg.setAttribute('viewBox', `140 ${y.toFixed(1)} 463 520`);
 
@@ -346,6 +353,11 @@
         drawn = target;
       }
     });
+
+    // Creek — draws left to right as creek section scrolls into view
+    // Creek at y=692 enters viewport at progress≈0.31, centers at progress≈0.54
+    const creekP = Math.max(0, Math.min(1, (progress - 0.31) / (0.54 - 0.31)));
+    creek.style.strokeDashoffset = creekLen * (1 - creekP);
   });
 </script>
 </body>
