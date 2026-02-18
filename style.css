@@ -36,39 +36,110 @@ a:active {
 
 /* Menu styles */
 #menu {
-  float: right;
-  margin-top: 30px;
-  margin-right: 20px;
+  position: fixed;
+  top: 20px;
+  right: 20px;
   text-align: right;
   width: 150px;
+  z-index: 100;
+  background: rgba(6, 18, 12, 0.52);
+  padding: 10px 14px;
+  border-radius: 4px;
+  backdrop-filter: blur(8px);
+}
+
+#menu .title {
+  color: #c8dab0;
+  font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
 }
 
 #menu ul {
   list-style-type: none;
-  margin-top: 3px;
+  margin-top: 6px;
   padding: 0;
 }
 
 #menu li {
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 #menu li a {
   display: block;
-  color: #0864c7;
+  color: #8ab898;
   font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
   font-size: 12px;
   text-decoration: none;
 }
 
+#menu li a:hover {
+  color: #c8dab0;
+}
+
 /* Content styles */
 #left {
-  display: none; /* Hide left column on mobile */
+  display: none;
 }
 
 #content {
-  margin-top: 15px;
+  margin: 0;
   padding: 0;
+  width: 100%;
+}
+
+#scene {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#scene svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.trail-seg {
+  transition: stroke-dashoffset 0.06s linear;
+}
+
+#story {
+  position: relative;
+  z-index: 10;
+}
+
+.landmark {
+  min-height: 160vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 60px;
+}
+
+.landmark-content {
+  max-width: 340px;
+  background: rgba(6, 18, 12, 0.72);
+  border-left: 2px solid rgba(140, 190, 130, 0.25);
+  padding: 28px 32px;
+  backdrop-filter: blur(6px);
+}
+
+.landmark-content h2 {
+  font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
+  font-size: 24px;
+  color: #c8dab0;
+  margin: 0 0 12px 0;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.landmark-content p {
+  color: #7a9e7e;
+  font-size: 15px;
+  line-height: 1.85;
+  margin: 0;
 }
 
 #content img {
