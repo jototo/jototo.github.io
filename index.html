@@ -31,10 +31,23 @@
   <stop offset="1"    stop-color="#081a12"/>
 </linearGradient>
 <linearGradient id="fog-grad" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
-  <stop offset="0"   stop-color="#2d5c3a" stop-opacity="0"/>
-  <stop offset="0.45" stop-color="#2d5c3a" stop-opacity="0.45"/>
-  <stop offset="1"   stop-color="#1e3f28" stop-opacity="0.78"/>
+  <stop offset="0"    stop-color="#2d5c3a" stop-opacity="0"/>
+  <stop offset="0.45" stop-color="#3a5430" stop-opacity="0.45"/>
+  <stop offset="1"    stop-color="#2a3818" stop-opacity="0.78"/>
 </linearGradient>
+<radialGradient id="treehouse-glow" cx="50%" cy="60%" r="50%">
+  <stop offset="0" stop-color="#c8901a" stop-opacity="0.22"/>
+  <stop offset="1" stop-color="#c8901a" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="fog-hole-grad" cx="427" cy="970" r="110" gradientUnits="userSpaceOnUse">
+  <stop offset="0"    stop-color="black"/>
+  <stop offset="0.5"  stop-color="black" stop-opacity="0.6"/>
+  <stop offset="1"    stop-color="black" stop-opacity="0"/>
+</radialGradient>
+<mask id="fog-mask">
+  <rect x="100" y="860" width="600" height="260" fill="white"/>
+  <ellipse cx="427" cy="970" rx="90" ry="110" fill="url(#fog-hole-grad)"/>
+</mask>
 </defs>
 <rect x="140" y="130" width="463" height="2730" fill="url(#bg-grad)"/>
 <g id="trees-scene">
@@ -237,7 +250,7 @@
 <use href="#trees-scene" transform="translate(18,1040)"/>
 <use href="#trees-scene" transform="translate(-30,1560)"/>
 <use href="#trees-scene" transform="translate(14,2080)"/>
-<path id="creek-line" d="M 0 695 C 180 700, 280 688, 371 692 C 460 696, 560 686, 700 690" stroke="#4878d4" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path id="creek-line" d="M 0 700 C 100 685, 230 708, 371 692 C 490 676, 610 705, 700 695" stroke="#4878d4" stroke-width="3.5" fill="none" stroke-linecap="round"/>
 <g id="trail-group">
 <path class="trail-seg" d="M 371.0 480.0 C 410.6 496.8, 410.6 507.5, 371.0 524.3" stroke="#9b7a6a" stroke-width="4.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path class="trail-seg" d="M 371.0 524.3 C 331.4 541.1, 331.4 551.7, 371.0 568.6" stroke="#9b7a6a" stroke-width="5.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
@@ -254,6 +267,7 @@
 <path class="trail-seg" d="M 371.0 1011.4 C 382.1 1028.3, 382.1 1038.9, 371.0 1055.7" stroke="#9b7a6a" stroke-width="2.7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 <path class="trail-seg" d="M 371.0 1055.7 C 369.4 1072.5, 369.4 1083.2, 371.0 1100.0" stroke="#9b7a6a" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
+<circle cx="371" cy="1100" r="4" fill="#9b7a6a" opacity="0.85"/>
 
 <!-- Treehouse grove: spread outward using one-sided groups -->
 <use href="#trees-left"  transform="translate(-155, 520)"/>
@@ -273,9 +287,11 @@
 <use href="#trees-right" transform="translate(15, 680)"/>
 <use href="#trees-right" transform="translate(55, 730)"/>
 
+<!-- Warm glow behind treehouse -->
+<ellipse cx="427" cy="970" rx="95" ry="80" fill="url(#treehouse-glow)"/>
 <image href="treehouse.svg" x="385" y="900" width="85" height="181"/>
-<!-- Ground fog rising at treehouse end -->
-<rect x="100" y="860" width="600" height="260" fill="url(#fog-grad)"/>
+<!-- Ground fog with soft radial hole around treehouse -->
+<rect x="100" y="860" width="600" height="260" fill="url(#fog-grad)" mask="url(#fog-mask)"/>
 </svg>
 </div>
 <div id="story">
