@@ -46,10 +46,11 @@ a:active {
   padding: 10px 14px;
   border-radius: 4px;
   backdrop-filter: blur(8px);
+  border-left: 2px solid rgba(140, 190, 130, 0.25);
 }
 
 #menu .title {
-  color: #c8dab0;
+  color: #e0e0e0;
   font-family: "Myriad Pro", "Helvetica Neue", Helvetica;
   font-size: 13px;
   font-weight: 500;
