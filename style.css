@@ -222,6 +222,28 @@ a:active {
   margin-top: 0;
 }
 
+blockquote {
+  margin: 28px 0;
+  padding-left: 24px;
+  border-left: 4px solid var(--color-teal);
+}
+
+blockquote p {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--color-putty);
+  margin: 0 0 8px 0;
+}
+
+blockquote cite {
+  display: block;
+  font-style: normal;
+  font-size: 14px;
+  color: var(--color-ochre);
+}
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(98px, 1fr));
