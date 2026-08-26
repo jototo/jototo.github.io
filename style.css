@@ -186,6 +186,37 @@ a:active {
   margin-top: 0;
 }
 
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(98px, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.book-grid .book,
+.book-grid .book img {
+  height: auto;
+  margin-bottom: 0;
+  border-radius: 0;
+}
+
+.book-grid .book {
+  display: block;
+  border: 3px solid var(--color-teal);
+  line-height: 0;
+  transition: border-color 0.15s ease;
+}
+
+.book-grid .book:hover {
+  border-color: var(--color-ochre);
+}
+
+.book-grid .book img {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
 /* Responsive adjustments for smaller screens*/
 @media (max-width: 768px) {
   body {
