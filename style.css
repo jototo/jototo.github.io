@@ -8,7 +8,8 @@
   --color-teal: #3E6259;
   --color-avocado: #6B7A4A;
   --color-ochre: #D69A3A;
-  --color-rust: #B5502E;
+  --color-ochre-hover: #DDAC5D;
+  --color-rust-text: #C37357;
   --color-putty: #C9BE9E;
 }
 
@@ -34,7 +35,7 @@ a {
 }
 
 a:visited {
-  color: var(--color-rust);
+  color: var(--color-rust-text);
 }
 
 a:hover {
@@ -42,7 +43,7 @@ a:hover {
 }
 
 a:active {
-  color: var(--color-rust);
+  color: var(--color-rust-text);
 }
 
 .container {
@@ -95,7 +96,7 @@ a:active {
 }
 
 #menu li a:hover {
-  color: var(--color-ochre);
+  color: var(--color-ochre-hover);
 }
 
 /* Content styles */
