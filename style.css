@@ -73,6 +73,8 @@ a:active {
   font-size: 14px;
   font-weight: 600;
   letter-spacing: 0.01em;
+  text-decoration: none;
+  display: inline-block;
 }
 
 #menu ul {
